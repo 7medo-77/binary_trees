@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_size - Checks size of the tree (number of nodes) 
+ * binary_tree_size - Checks size of the tree (number of nodes)
  *					  form the node passed to the argument and downwards
  *
  * @tree: Pointer to the root of the binary tree
