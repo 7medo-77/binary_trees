@@ -9,9 +9,10 @@
  */
 int main(void)
 {
-	binary_tree_t *root;
-	size_t height;
+	binary_tree_t *root, *null;
+	size_t height, test_null;
 
+	null = NULL;
 	root = binary_tree_node(NULL, 98);
 	root->left = binary_tree_node(root, 12);
 	root->right = binary_tree_node(root, 402);
@@ -21,9 +22,14 @@ int main(void)
 
 	height = binary_tree_height(root);
 	printf("Height from %d: %lu\n", root->n, height);
+
 	height = binary_tree_height(root->right);
 	printf("Height from %d: %lu\n", root->right->n, height);
+
 	height = binary_tree_height(root->left->right);
 	printf("Height from %d: %lu\n", root->left->right->n, height);
+
+	test_null = binary_tree_height(null);
+	printf("Height from: %lu\n", test_null);
 	return (0);
 }
